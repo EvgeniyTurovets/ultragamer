@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
+    var lazyLoadInstance = new LazyLoad();
     // поиск на моб
     let headerMob = document.getElementById('header__mob');
     let searchMobOpen = document.getElementById('search-mob__icon');
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         mobNavBurger.classList.remove('active')
     })
 
+    // клик вне меню
     document.addEventListener('click', function(event) {
         let isClickInsideElement = mobNavBurger.contains(event.target);
   
@@ -39,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
     });
 
+    // свайп в лево
     let x;
     window.addEventListener('touchstart', e => x = e.changedTouches[0].clientX);
     window.addEventListener('touchend', e => e.changedTouches[0].clientX - x < -50 && swipeLeft());
@@ -46,4 +49,86 @@ document.addEventListener("DOMContentLoaded", function(event) {
     function swipeLeft() {
         mobNavBurger.classList.remove('active')
     }
+
+    // главная слайдер сверху
+    const swiper = new Swiper('.swiper-top', {
+        // Optional parameters
+        loop: true,
+        slidesPerView: 1,
+        lazy: true,
+      
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+    });
+
+    // главная секция со слайдером
+    // Params
+	let sliderCount = document.querySelectorAll('.swiper-section')
+	let options = {
+	    init: false,
+	    loop: true,
+        lazy: true,
+        slidesPerView: 1,
+        spaceBetween: 0,
+	    pagination: {
+	    el: '.swiper-pagination',
+	    },
+        breakpoints: {
+            // when window width is >= 320px
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 10,
+            },
+            // when window width is >= 480px
+            1200: {
+              slidesPerView: 4,
+            },
+            // when window width is >= 640px
+            1450: {
+              slidesPerView: 5,
+              spaceBetween: 10,
+            }
+        }
+	    
+	}
+
+    const swiperPrev = document.querySelectorAll('.swiper-button-prev')
+    const swiperNext = document.querySelectorAll('.swiper-button-next')
+    swiperPrev.forEach(el => el.addEventListener('click', e => {
+        let parentIndex =  el.closest('.swiper-over').querySelector(".swiper-section").getAttribute('data-index');
+        swiperArray[parentIndex ].slidePrev();
+    }));
+ 
+    swiperNext.forEach(el => el.addEventListener('click', e => {
+        let parentIndex =  el.closest('.swiper-over').querySelector(".swiper-section").getAttribute('data-index');
+        swiperArray[parentIndex].slideNext();
+    }));
+
+    swiperArray = []
+	for(let i = 0; i < sliderCount.length; i++){
+        sliderCount[i].setAttribute('data-index', i);
+	    mySwiper = new Swiper(sliderCount[i], options);
+	    mySwiper.init();
+
+        swiperArray[i] = mySwiper; 
+	}
+
+
+    // .tovar-item__action-btn
+    let tovarActionBtn = document.querySelectorAll('.tovar-item__action-btn')
+    tovarActionBtn.forEach(el => el.addEventListener('click', function(){
+        el.classList.toggle('active')
+    }))
 });
