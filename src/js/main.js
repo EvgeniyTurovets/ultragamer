@@ -131,4 +131,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     tovarActionBtn.forEach(el => el.addEventListener('click', function(){
         el.classList.toggle('active')
     }))
+
+
+    // футер меню
+    let footerNavTitle = document.querySelectorAll('.footer__nav__title')
+    footerNavTitle.forEach(el =>el.addEventListener('click', function(){
+        el.closest('.footer__nav').classList.toggle('active')
+    }))
 });

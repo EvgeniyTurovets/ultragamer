@@ -7,7 +7,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 html,body{
-    background: #E5E5E5;
+    background: #f5f5f5;
 }
 .app{
     overflow: hidden;
@@ -347,7 +347,7 @@ input::placeholder,textarea::placeholder{
 @media(max-width: 1023px){
     .app{
         padding-top: 65px;
-        padding-bottom: 70px;
+        padding-bottom: 45px;
     }
     .wrap{
         max-width: 768px;
@@ -1284,5 +1284,223 @@ p{
         width: 100%;
         margin: 0;
         margin-top: 10px;
+    }
+}
+
+// футер
+.footer{
+    background: #E5E5E5;
+    padding-top: 41px;
+    padding-bottom: 41px;
+}
+.footer__wrap{
+    display: flex;
+    justify-content: space-between;
+}
+.footer__soc svg{
+    width: 100%;
+    height: 100%;
+}
+.footer__soc ul{
+    display: flex;
+    margin-bottom: 25px;
+    margin-left: -5px;
+}
+.footer__soc ul li{
+    margin-right: 5px;
+}
+.footer__soc ul li a{
+    display: block;
+    border: 5px solid transparent;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+}
+.footer__soc ul li a:hover{
+    border: 5px solid #d9d9d9;
+}
+.footer__soc__title{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 48.4%;
+    margin-bottom: 15px;
+}
+.footer__right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.footer__right button{
+    border: 1px solid #232323;
+    border-radius: 20px;
+    width: 163px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: #848484;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 133.9%;
+    cursor: pointer;
+    transition: 0.1s all;
+    margin-bottom: 21px;
+    svg{
+        margin-right: -3px;
+        margin-left: 9px;
+    }
+}
+.footer__right button:hover{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    color: #000;
+}
+
+.footer__right p{
+    text-align: right;
+    max-width: 240px;
+    font-size: 9px;
+    line-height: 166.9%;
+}
+
+.footer__mid{
+    flex: 1;
+    display: flex;
+    padding-left: 183px;
+}
+.footer__nav{
+    margin-right: 71px;
+}
+.footer__nav__title{
+    font-weight: bold;
+    font-size: 13px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+.footer__nav a{
+    padding: 5px 0;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 126.9%;
+    transition: 0.1s all;
+    display: flex;
+    align-items: center;
+    svg{
+        margin-right: 15px;
+    }
+}
+.footer__nav a:hover{
+    color: #848484;
+}
+.footer__nav li{
+    margin-bottom: 10px;
+}
+
+.footer__nav .footer__contact li{
+    margin-bottom: 5px;
+    a{
+        font-weight: 600;
+    }
+}
+
+@media(max-width: 1449px){
+    .footer__mid{
+        padding-left: 55px;
+    }
+}
+
+@media(max-width: 1199px){
+    .footer__mid{
+        padding-left: 35px;
+    }
+    .footer__nav {
+        margin-right: 25px;
+    }
+}
+
+@media(max-width: 1023px){
+    .footer__wrap{
+        flex-wrap: wrap;
+    }
+    .footer__mid{
+        order: 1;
+        width: 100%;
+        padding-left: 0;
+        margin-bottom: 50px;
+    }
+    .footer__nav{
+        margin-right: 35px;
+    }
+    .footer__soc{
+        order: 2;
+        width: 50%;
+    }
+    .footer__right{
+        order: 3;
+        width: 50%;
+    }
+}
+
+@media(max-width: 639px){
+    .footer__right{
+        width: 100%;
+    }
+    .footer__soc{
+        width: 100%;
+    }
+    .footer__mid{
+        flex-direction: column;
+        margin-bottom: 25px;
+    }
+    .footer__nav ul{
+        display: none;
+        margin-bottom: 25px;
+    }
+    .footer__soc{
+        margin-bottom: 0px;
+    }
+    .footer__right{
+        align-items: center;
+    }
+    .footer__right p{
+        text-align: center;
+        max-width: 300px;
+    }
+    .footer__soc{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer__soc ul li{
+        margin: 0 2.5px;
+    }
+    .footer__soc ul{
+        margin-left: 0;
+    }
+    .footer__nav__title{
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+    }
+    .footer__nav__title:after{
+        content: "";
+        width: 5px;
+        height: 5px;
+        display: block;
+        border-right: 1px solid #000;
+        border-bottom: 1px solid #000;
+        transform: rotate(45deg);
+        margin-left: 15px;
+        position: relative;
+    }
+
+    .footer__nav.active{
+        .footer__nav__title:after{
+            transform: rotate(-135deg);
+            bottom: -2px;
+        }
+        ul{
+            display: block;
+        }
     }
 }
