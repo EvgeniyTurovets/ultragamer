@@ -319,7 +319,8 @@ input::placeholder, textarea::placeholder {
   -ms-flex-align: center;
       align-items: center; }
   .header__contact svg {
-    margin-right: 10px; }
+    margin-right: 10px;
+    margin-bottom: 8px; }
 
 .header__contact__wrap {
   display: -ms-flexbox;
