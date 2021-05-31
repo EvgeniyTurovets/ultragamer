@@ -80,6 +80,18 @@ body {
   line-height: 1.2;
   font-family: 'Montserrat', sans-serif; }
 
+p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  /* or 154% */
+  margin-bottom: 10px;
+  color: #291E1E; }
+
+p a {
+  color: #CE1D32;
+  text-decoration: underline; }
+
 html, body {
   background: #f5f5f5; }
 
@@ -719,7 +731,7 @@ input::placeholder, textarea::placeholder {
   width: calc(100% - 360px); }
 
 .swiper-pagination {
-  z-index: 4; }
+  z-index: 3; }
 
 .swiper-top {
   width: 100%;
@@ -766,8 +778,6 @@ input::placeholder, textarea::placeholder {
     bottom: 37px; }
   .swiper-top .swiper-button-next, .swiper-top .swiper-button-prev {
     color: #C4C4C4; }
-  .swiper-top .swiper-button-next:hover, .swiper-top .swiper-button-prev:hover {
-    color: #000; }
   .swiper-top .swiper-button-next:after, .swiper-top .swiper-button-prev:after {
     font-size: 32px; }
 
@@ -896,7 +906,7 @@ input::placeholder, textarea::placeholder {
 
 .tovar-item__status {
   border-radius: 20px;
-  padding: 5px 15px;
+  padding: 7px 15px;
   display: inline-block;
   margin-left: 50%;
   -webkit-transform: translateX(-50%);
@@ -1070,6 +1080,9 @@ input::placeholder, textarea::placeholder {
   color: #c4c4c4;
   transition: 0.1s all; }
 
+.swiper-over .swiper-button-next:hover, .swiper-over .swiper-button-prev:hover {
+  color: #000; }
+
 .swiper-over .swiper-button-next:after, .swiper-over .swiper-button-prev:after {
   font-size: 32px; }
 
@@ -1105,7 +1118,15 @@ input::placeholder, textarea::placeholder {
   .main-slider-section__top h2 {
     font-size: 16px; }
   .main-slider-section__top a {
-    font-size: 12px; } }
+    font-size: 12px; }
+  .main-slider-section__top.main-slider-section__top--rec a {
+    margin-left: 0;
+    margin-top: 10px; }
+  .main-slider-section__top.main-slider-section__top--rec {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: start;
+        align-items: flex-start; } }
 
 .section {
   background: #FFFFFF;
@@ -1203,14 +1224,6 @@ input::placeholder, textarea::placeholder {
   font-size: 33px;
   line-height: 133.9%;
   padding-bottom: 15px; }
-
-p {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 21px;
-  /* or 154% */
-  margin-bottom: 10px;
-  color: #291E1E; }
 
 @media (max-width: 1023px) {
   .section-title.section-title-big {
@@ -1535,3 +1548,6 @@ p {
     bottom: -2px; }
   .footer__nav.active ul {
     display: block; } }
+
+.swiper-button-next, .swiper-button-prev {
+  z-index: 2; }
