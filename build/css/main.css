@@ -1564,7 +1564,8 @@ input::placeholder, textarea::placeholder {
 #mob-nav-catalog {
   z-index: 6; }
   #mob-nav-catalog .main-top__left {
-    display: block; }
+    display: block;
+    margin-right: 0; }
     #mob-nav-catalog .main-top__left a {
       display: -ms-flexbox;
       display: flex;
