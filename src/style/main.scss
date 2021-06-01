@@ -152,6 +152,7 @@ html,body{
     text-transform: uppercase;
     color: #291E1E;
     transition: 0.1s all;
+    cursor: pointer;
 }
 .header__bot__catalog:hover{
     color: #06E9FB;
@@ -839,7 +840,7 @@ input::placeholder,textarea::placeholder{
 .tovar-item{
     background: #FFFFFF;
     border: 1px solid #C4C4C4;
-    padding: 30px 22px;
+    padding: 30px 20px;
     position: relative;
 }
 .tovar-item__img{
@@ -939,7 +940,7 @@ input::placeholder,textarea::placeholder{
     background: #2EC258;
     border-radius: 20px;
     color: #FFFFFF;
-    padding: 8px 23px;
+    padding: 6px 23px;
     cursor: pointer;
     transition: 0.3s all;
 }
@@ -1557,4 +1558,27 @@ input::placeholder,textarea::placeholder{
 
 .main-slider-section .swiper-slide{
     border: 1px solid transparent;
+}
+
+.des-nav-catalog{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 5;
+    background-color: #fff;
+    width: 300px;
+    padding-top: 12px;
+    display: none;
+    .main-top__left{
+        margin-right: 0;
+        border: 1px solid #e5e5e5;
+        border-bottom: 0;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    }
+}
+.header__bot__catalog{
+    position: relative;
+}
+.header__bot__catalog:hover .des-nav-catalog{  
+    display: block;
 }

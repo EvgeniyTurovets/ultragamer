@@ -88,11 +88,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
             // when window width is >= 320px
             640: {
                 slidesPerView: 2,
-                spaceBetween: 10,
+                spaceBetween: 8,
             },
             1024: {
               slidesPerView: 3,
-              spaceBetween: 10,
+              spaceBetween: 8,
             },
             // when window width is >= 480px
             1200: {
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             // when window width is >= 640px
             1450: {
               slidesPerView: 5,
-              spaceBetween: 10,
+              spaceBetween: 8,
             }
         }
 	    
@@ -152,5 +152,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }))
     catalogCloseBtn.addEventListener('click', function(){
         mobNavCatalog.classList.remove('active')
+    })
+
+
+    // Каталог на пк
+    let headerBotCatalogBtn = getElementById('header__bot__catalog')
+    headerBotCatalogBtn.addEventListener('click', function(){
+        
     })
 });
