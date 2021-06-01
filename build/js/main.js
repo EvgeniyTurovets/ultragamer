@@ -154,10 +154,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
         mobNavCatalog.classList.remove('active')
     })
 
-
-    // Каталог на пк
-    let headerBotCatalogBtn = getElementById('header__bot__catalog')
-    headerBotCatalogBtn.addEventListener('click', function(){
-        
-    })
 });

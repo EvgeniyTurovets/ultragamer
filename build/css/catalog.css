@@ -31,7 +31,8 @@
   content: "–";
   margin-left: 7px;
   margin-right: 7px;
-  text-decoration: none; }
+  text-decoration: none;
+  color: #000; }
 
 .section.tovar-cart {
   padding: 36px 80px 50px 80px; }
