@@ -59,9 +59,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     // табы
     
-    let tabsBlocks = document.querySelectorAll('.tabs')
     let tabsLinks = document.querySelectorAll('.tabs__link')
-    let tabsContents = document.querySelectorAll('.tabs__content')
 
     tabsLinks.forEach(function(el, index){
         el.addEventListener('click', function(){
@@ -73,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                         el2.classList.remove('active')
                     }
                 })
+                let tabsContents = el.closest('.tabs').querySelectorAll('.tabs__content');
                 tabsContents.forEach(function(el2, index2){
                     if(index2 != index){
                         el2.classList.remove('active')
@@ -85,4 +84,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
             }
         })
     })
+
+
+    // .btn-more
+    let btnMore = document.querySelectorAll('.btn-more')
+    btnMore.forEach(btn => btn.addEventListener('click', function(){
+        btn.classList.toggle('active')
+    }))
 })

@@ -47,7 +47,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     window.addEventListener('touchend', e => e.changedTouches[0].clientX - x < -50 && swipeLeft());
 
     function swipeLeft() {
+        // меню бергер
         mobNavBurger.classList.remove('active')
+        // меню каталог
+        mobNavCatalog.classList.remove('active')
     }
 
     // главная слайдер сверху
@@ -138,4 +141,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
     footerNavTitle.forEach(el =>el.addEventListener('click', function(){
         el.closest('.footer__nav').classList.toggle('active')
     }))
+
+    // каталог на моб
+    let catalogBtns = document.querySelectorAll('.catalog-btn')
+    let mobNavCatalog = document.getElementById('mob-nav-catalog')
+    let catalogCloseBtn = document.getElementById('catalog-close')
+   
+    catalogBtns.forEach(btn =>btn.addEventListener('click', function(){
+       mobNavCatalog.classList.add('active')
+    }))
+    catalogCloseBtn.addEventListener('click', function(){
+        mobNavCatalog.classList.remove('active')
+    })
 });

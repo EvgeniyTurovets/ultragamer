@@ -501,6 +501,12 @@ input::placeholder,textarea::placeholder{
         flex-direction: column;
         font-size: 10px;
     }
+    .mob-nav-bot a.active{
+        color: #f843d6;
+        svg path{
+            fill: #f843d6;
+        }
+    }
     .mob-nav-bot a.mob-cart{
         position: relative;
         span{
@@ -1522,4 +1528,33 @@ input::placeholder,textarea::placeholder{
 
 .swiper-button-next, .swiper-button-prev{
     z-index: 2;
+}
+@media(max-width: 1023px){
+    .main-top__left{
+        display: none;
+    }
+}
+
+
+#mob-nav-catalog{
+    z-index: 6;
+    .main-top__left{
+        display: block;
+        a{
+            display: flex;
+            padding-right: 25px;
+        }
+    }
+}
+
+@media(max-width: 639px){
+    .main-top__icon{
+        margin-left: 0;
+        margin-right: 12px;
+        
+    }
+}
+
+.main-slider-section .swiper-slide{
+    border: 1px solid transparent;
 }
