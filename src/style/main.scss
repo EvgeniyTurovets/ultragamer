@@ -945,6 +945,8 @@ input::placeholder,textarea::placeholder{
     padding: 6px 23px;
     cursor: pointer;
     transition: 0.3s all;
+    width: 106px;
+    height: 32px;
 }
 .tovar-item__buy:hover{
     opacity: 0.8;
@@ -961,6 +963,8 @@ input::placeholder,textarea::placeholder{
     background-color: transparent;
     margin-bottom: 5px;
     padding: 2px;
+    color: #848484;
+    transition: 0.1s all;
 }
 .tovar-item__action-btn svg path{
     transition: 0.1s all;
@@ -971,7 +975,12 @@ input::placeholder,textarea::placeholder{
 .tovar-item__action-btn.active svg path{
     fill: #F843D6;
 }
-
+.tovar-item__action-btn:hover{
+    color: #000;
+}
+.tovar-item__action-btn.active{
+    color: #000;
+}
 .tovar-item-promo{
     position: absolute;
     left: 15px;
@@ -1200,7 +1209,7 @@ input::placeholder,textarea::placeholder{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 12px;
+    margin-bottom: 30px;
 }
 .subscribe-news__title{
     font-weight: bold;
@@ -1464,8 +1473,13 @@ input::placeholder,textarea::placeholder{
         width: 50%;
     }
 }
-
+@media(max-width: 767px){
+    .tovar-item{
+        padding: 20px;
+    }
+}
 @media(max-width: 639px){
+    
     .footer__right{
         width: 100%;
     }

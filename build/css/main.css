@@ -1012,7 +1012,9 @@ input::placeholder, textarea::placeholder {
   color: #FFFFFF;
   padding: 6px 23px;
   cursor: pointer;
-  transition: 0.3s all; }
+  transition: 0.3s all;
+  width: 106px;
+  height: 32px; }
 
 .tovar-item__buy:hover {
   opacity: 0.8; }
@@ -1030,7 +1032,9 @@ input::placeholder, textarea::placeholder {
   cursor: pointer;
   background-color: transparent;
   margin-bottom: 5px;
-  padding: 2px; }
+  padding: 2px;
+  color: #848484;
+  transition: 0.1s all; }
 
 .tovar-item__action-btn svg path {
   transition: 0.1s all; }
@@ -1040,6 +1044,12 @@ input::placeholder, textarea::placeholder {
 
 .tovar-item__action-btn.active svg path {
   fill: #F843D6; }
+
+.tovar-item__action-btn:hover {
+  color: #000; }
+
+.tovar-item__action-btn.active {
+  color: #000; }
 
 .tovar-item-promo {
   position: absolute;
@@ -1249,7 +1259,7 @@ input::placeholder, textarea::placeholder {
       align-items: center;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  margin-bottom: 12px; }
+  margin-bottom: 30px; }
 
 .subscribe-news__title {
   font-weight: bold;
@@ -1499,6 +1509,10 @@ input::placeholder, textarea::placeholder {
     -ms-flex-order: 3;
         order: 3;
     width: 50%; } }
+
+@media (max-width: 767px) {
+  .tovar-item {
+    padding: 20px; } }
 
 @media (max-width: 639px) {
   .footer__right {

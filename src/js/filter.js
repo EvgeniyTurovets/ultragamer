@@ -40,4 +40,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
       leftInput.value = Math.round(values[0]).toLocaleString('ru-RU')
       rightInput.value = Math.round(values[1]).toLocaleString('ru-RU')
     }
+
+    // фильтр
+    let filterMob = document.getElementById('filter-mob')
+    let filter =  document.getElementById('filter')
+    let filterClose = document.getElementById('filter__close')
+    
+    filterMob.addEventListener('click', function(){
+        filter.classList.toggle('active')
+    })
+
+    filterClose.addEventListener('click', function(){
+        filter.classList.remove('active')
+    })
+
+
 })

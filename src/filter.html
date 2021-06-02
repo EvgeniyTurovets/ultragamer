@@ -7,7 +7,7 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- плгины -->
     <link rel='stylesheet' type='text/css' media='screen' href='./libs/swiper/swiper.css'>
@@ -508,7 +508,11 @@
                 </div>
 
                 <section class="filter-wrap">
-                    <div class="filter">
+                    <button class="filter-mob" id="filter-mob">Фильтр</button>
+                    <div class="filter" id="filter">
+                        <div class="filter__close" id="filter__close">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg>
+                        </div>
                         <div class="filter__row active">
                             <div class="filter__title">Категория</div>
                             <div class="filter__content">
@@ -675,7 +679,7 @@
                                 </label>
                             </div>
                             <div class="catalog-type">
-                                <a href="" class="active">
+                                <a href="./filter2.html">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="#848484" xmlns="http://www.w3.org/2000/svg">
                                         <rect width="6.03881" height="5.97826" fill="current"/>
                                         <rect y="9.56522" width="6.03881" height="5.97826" fill="current"/>
@@ -683,7 +687,7 @@
                                         <rect x="9.66211" y="9.56522" width="6.03881" height="5.97826" fill="current"/>
                                     </svg>
                                 </a>
-                                <a href="">
+                                <a href="./filter.html"  class="active">
                                     <svg width="27" height="16" viewBox="0 0 27 16" fill="#848484" xmlns="http://www.w3.org/2000/svg">
                                         <rect x="0.046875" width="3.62329" height="3.58696" fill="current"/>
                                         <rect x="0.046875" y="5.97827" width="3.62329" height="3.58696" fill="current"/>
@@ -693,6 +697,257 @@
                                         <rect x="7.29297" y="11.9565" width="19.3242" height="3.58696" fill="current"/>
                                     </svg>
                                 </a>
+                            </div>
+                        </div>
+                        <div class="catalog">
+                            <div class="catalog__type1">
+                                <div class="catalog__item">
+                                    <div class="catalog__item__left">
+                                        <div class="tovar-item-promo">
+                                            <span class="promo-discount">Скидка 5%</span>
+                                            <span class="promo-hit">Хит</span>    
+                                        </div>
+                                        <a href="" class="tovar-item__img lazy" data-bg="./img/tovar.png"></a>
+                                    </div>
+                                    <div class="catalog__item__mid">
+                                        <div class="tovar-item__status in-stock">В наличии</div>
+                                        <a href="" class="tovar-item__name">Игровая приставка Sony Playstation 5</a>
+                                        <div class="tovar-item__action">
+                                            <button class="tovar-item__action-btn">
+                                                <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M2.45932 1.88429C3.61639 0.685023 5.23774 0.0026552 6.93644 0.000125576C8.63649 0.0020228 10.2595 0.684029 11.4184 1.88352L11.8133 2.28596L12.2083 1.88352C14.5078 -0.502955 18.3782 -0.640006 20.853 1.57735C20.9627 1.67564 21.0686 1.77773 21.1705 1.88352C23.6098 4.42065 23.6098 8.34167 21.1705 10.8788L12.3937 19.8039C12.0901 20.113 11.5841 20.1263 11.2635 19.8335C11.253 19.8239 11.2428 19.814 11.2329 19.8039L2.45927 10.8788C0.0201492 8.34194 0.0201492 4.42115 2.45932 1.88429ZM3.61616 9.81721H3.61695L11.8133 18.1533L20.0104 9.81721C21.8739 7.87861 21.8739 4.88294 20.0104 2.94434C18.3182 1.17568 15.4594 1.06478 13.6252 2.69662C13.5361 2.77585 13.4505 2.85847 13.3683 2.94434L12.3937 3.93578C12.0726 4.24349 11.554 4.24349 11.2329 3.93578L10.2583 2.94511C8.56603 1.17645 5.70722 1.06555 3.87305 2.69739C3.784 2.77662 3.69832 2.85924 3.61616 2.94511C1.73646 4.88678 1.72268 7.88792 3.61616 9.81721Z" fill="#C4C4C4"></path>
+                                                </svg>
+                                                В избранное
+                                            </button>
+                                            <button class="tovar-item__action-btn">
+                                                <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M23.6641 20.2795V0.778778H17.5703V20.2795H16.0469V6.10225H9.95312V20.2795H8.42969V10.8843H2.33594V20.2795H0V21.7788H26V20.2795H23.6641V20.2795ZM19.0938 2.27802H22.1406V20.2795H19.0938V2.27802ZM11.4766 7.6015H14.5234V20.2795H11.4766V7.6015ZM3.85938 12.3834H6.90625V20.2795H3.85938V12.3834Z" fill="#C4C4C4"></path>
+                                                </svg>
+                                            Сравнить 
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="catalog__item__right">
+                                        <div class="tovar-item__about">
+                                            <div class="tovar-item__cod">Код товара 12935854</div>
+                                            <div class="tovar-item__old-price">52 089 ₽ </div>
+                                        </div>
+                                        <div class="tovar-item__bot">
+                                            <div class="tovar-item__price">46 989 ₽</div>
+                                            <button class="tovar-item__buy">Купить</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__item">
+                                    <div class="catalog__item__left">
+                                        <div class="tovar-item-promo">
+                                            <span class="promo-discount">Скидка 5%</span>
+                                            
+                                        </div>
+                                        <a href="" class="tovar-item__img lazy" data-bg="./img/tovar.png"></a>
+                                    </div>
+                                    <div class="catalog__item__mid">
+                                        <div class="tovar-item__status not-available">Нет в наличии</div>
+                                        <a href="" class="tovar-item__name">Игровая приставка Sony Playstation 5</a>
+                                        <div class="tovar-item__action">
+                                            <button class="tovar-item__action-btn">
+                                                <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M2.45932 1.88429C3.61639 0.685023 5.23774 0.0026552 6.93644 0.000125576C8.63649 0.0020228 10.2595 0.684029 11.4184 1.88352L11.8133 2.28596L12.2083 1.88352C14.5078 -0.502955 18.3782 -0.640006 20.853 1.57735C20.9627 1.67564 21.0686 1.77773 21.1705 1.88352C23.6098 4.42065 23.6098 8.34167 21.1705 10.8788L12.3937 19.8039C12.0901 20.113 11.5841 20.1263 11.2635 19.8335C11.253 19.8239 11.2428 19.814 11.2329 19.8039L2.45927 10.8788C0.0201492 8.34194 0.0201492 4.42115 2.45932 1.88429ZM3.61616 9.81721H3.61695L11.8133 18.1533L20.0104 9.81721C21.8739 7.87861 21.8739 4.88294 20.0104 2.94434C18.3182 1.17568 15.4594 1.06478 13.6252 2.69662C13.5361 2.77585 13.4505 2.85847 13.3683 2.94434L12.3937 3.93578C12.0726 4.24349 11.554 4.24349 11.2329 3.93578L10.2583 2.94511C8.56603 1.17645 5.70722 1.06555 3.87305 2.69739C3.784 2.77662 3.69832 2.85924 3.61616 2.94511C1.73646 4.88678 1.72268 7.88792 3.61616 9.81721Z" fill="#C4C4C4"></path>
+                                                </svg>
+                                                В избранное
+                                            </button>
+                                            <button class="tovar-item__action-btn">
+                                                <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M23.6641 20.2795V0.778778H17.5703V20.2795H16.0469V6.10225H9.95312V20.2795H8.42969V10.8843H2.33594V20.2795H0V21.7788H26V20.2795H23.6641V20.2795ZM19.0938 2.27802H22.1406V20.2795H19.0938V2.27802ZM11.4766 7.6015H14.5234V20.2795H11.4766V7.6015ZM3.85938 12.3834H6.90625V20.2795H3.85938V12.3834Z" fill="#C4C4C4"></path>
+                                                </svg>
+                                            Сравнить 
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="catalog__item__right">
+                                        <div class="tovar-item__about">
+                                            <div class="tovar-item__cod">Код товара 12935854</div>
+                                            <div class="tovar-item__old-price"></div>
+                                        </div>
+                                        <div class="tovar-item__bot">
+                                            <div class="tovar-item__price">46 989 ₽</div>
+                                            <button class="tovar-item__buy">Купить</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__item">
+                                    <div class="catalog__item__left">
+                                        <div class="tovar-item-promo">
+                                            <span class="promo-discount">Скидка 5%</span>
+                                            <span class="promo-hit">Хит</span>    
+                                        </div>
+                                        <a href="" class="tovar-item__img lazy" data-bg="./img/tovar.png"></a>
+                                    </div>
+                                    <div class="catalog__item__mid">
+                                        <div class="tovar-item__status in-stock">В наличии</div>
+                                        <a href="" class="tovar-item__name">Игровая приставка Sony Playstation 5</a>
+                                        <div class="tovar-item__action">
+                                            <button class="tovar-item__action-btn">
+                                                <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M2.45932 1.88429C3.61639 0.685023 5.23774 0.0026552 6.93644 0.000125576C8.63649 0.0020228 10.2595 0.684029 11.4184 1.88352L11.8133 2.28596L12.2083 1.88352C14.5078 -0.502955 18.3782 -0.640006 20.853 1.57735C20.9627 1.67564 21.0686 1.77773 21.1705 1.88352C23.6098 4.42065 23.6098 8.34167 21.1705 10.8788L12.3937 19.8039C12.0901 20.113 11.5841 20.1263 11.2635 19.8335C11.253 19.8239 11.2428 19.814 11.2329 19.8039L2.45927 10.8788C0.0201492 8.34194 0.0201492 4.42115 2.45932 1.88429ZM3.61616 9.81721H3.61695L11.8133 18.1533L20.0104 9.81721C21.8739 7.87861 21.8739 4.88294 20.0104 2.94434C18.3182 1.17568 15.4594 1.06478 13.6252 2.69662C13.5361 2.77585 13.4505 2.85847 13.3683 2.94434L12.3937 3.93578C12.0726 4.24349 11.554 4.24349 11.2329 3.93578L10.2583 2.94511C8.56603 1.17645 5.70722 1.06555 3.87305 2.69739C3.784 2.77662 3.69832 2.85924 3.61616 2.94511C1.73646 4.88678 1.72268 7.88792 3.61616 9.81721Z" fill="#C4C4C4"></path>
+                                                </svg>
+                                                В избранное
+                                            </button>
+                                            <button class="tovar-item__action-btn">
+                                                <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M23.6641 20.2795V0.778778H17.5703V20.2795H16.0469V6.10225H9.95312V20.2795H8.42969V10.8843H2.33594V20.2795H0V21.7788H26V20.2795H23.6641V20.2795ZM19.0938 2.27802H22.1406V20.2795H19.0938V2.27802ZM11.4766 7.6015H14.5234V20.2795H11.4766V7.6015ZM3.85938 12.3834H6.90625V20.2795H3.85938V12.3834Z" fill="#C4C4C4"></path>
+                                                </svg>
+                                            Сравнить 
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="catalog__item__right">
+                                        <div class="tovar-item__about">
+                                            <div class="tovar-item__cod">Код товара 12935854</div>
+                                            <div class="tovar-item__old-price">52 089 ₽ </div>
+                                        </div>
+                                        <div class="tovar-item__bot">
+                                            <div class="tovar-item__price">46 989 ₽</div>
+                                            <button class="tovar-item__buy">Купить</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__item">
+                                    <div class="catalog__item__left">
+                                        <div class="tovar-item-promo">
+                                            <span class="promo-discount">Скидка 5%</span>
+                                            <span class="promo-hit">Хит</span>    
+                                        </div>
+                                        <a href="" class="tovar-item__img lazy" data-bg="./img/tovar.png"></a>
+                                    </div>
+                                    <div class="catalog__item__mid">
+                                        <div class="tovar-item__status in-stock">В наличии</div>
+                                        <a href="" class="tovar-item__name">Игровая приставка Sony Playstation 5</a>
+                                        <div class="tovar-item__action">
+                                            <button class="tovar-item__action-btn">
+                                                <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M2.45932 1.88429C3.61639 0.685023 5.23774 0.0026552 6.93644 0.000125576C8.63649 0.0020228 10.2595 0.684029 11.4184 1.88352L11.8133 2.28596L12.2083 1.88352C14.5078 -0.502955 18.3782 -0.640006 20.853 1.57735C20.9627 1.67564 21.0686 1.77773 21.1705 1.88352C23.6098 4.42065 23.6098 8.34167 21.1705 10.8788L12.3937 19.8039C12.0901 20.113 11.5841 20.1263 11.2635 19.8335C11.253 19.8239 11.2428 19.814 11.2329 19.8039L2.45927 10.8788C0.0201492 8.34194 0.0201492 4.42115 2.45932 1.88429ZM3.61616 9.81721H3.61695L11.8133 18.1533L20.0104 9.81721C21.8739 7.87861 21.8739 4.88294 20.0104 2.94434C18.3182 1.17568 15.4594 1.06478 13.6252 2.69662C13.5361 2.77585 13.4505 2.85847 13.3683 2.94434L12.3937 3.93578C12.0726 4.24349 11.554 4.24349 11.2329 3.93578L10.2583 2.94511C8.56603 1.17645 5.70722 1.06555 3.87305 2.69739C3.784 2.77662 3.69832 2.85924 3.61616 2.94511C1.73646 4.88678 1.72268 7.88792 3.61616 9.81721Z" fill="#C4C4C4"></path>
+                                                </svg>
+                                                В избранное
+                                            </button>
+                                            <button class="tovar-item__action-btn">
+                                                <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M23.6641 20.2795V0.778778H17.5703V20.2795H16.0469V6.10225H9.95312V20.2795H8.42969V10.8843H2.33594V20.2795H0V21.7788H26V20.2795H23.6641V20.2795ZM19.0938 2.27802H22.1406V20.2795H19.0938V2.27802ZM11.4766 7.6015H14.5234V20.2795H11.4766V7.6015ZM3.85938 12.3834H6.90625V20.2795H3.85938V12.3834Z" fill="#C4C4C4"></path>
+                                                </svg>
+                                            Сравнить 
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="catalog__item__right">
+                                        <div class="tovar-item__about">
+                                            <div class="tovar-item__cod">Код товара 12935854</div>
+                                            <div class="tovar-item__old-price">52 089 ₽ </div>
+                                        </div>
+                                        <div class="tovar-item__bot">
+                                            <div class="tovar-item__price">46 989 ₽</div>
+                                            <button class="tovar-item__buy">Купить</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__item">
+                                    <div class="catalog__item__left">
+                                        <div class="tovar-item-promo">
+                                            <span class="promo-discount">Скидка 5%</span>
+                                            <span class="promo-hit">Хит</span>    
+                                        </div>
+                                        <a href="" class="tovar-item__img lazy" data-bg="./img/tovar.png"></a>
+                                    </div>
+                                    <div class="catalog__item__mid">
+                                        <div class="tovar-item__status in-stock">В наличии</div>
+                                        <a href="" class="tovar-item__name">Игровая приставка Sony Playstation 5</a>
+                                        <div class="tovar-item__action">
+                                            <button class="tovar-item__action-btn">
+                                                <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M2.45932 1.88429C3.61639 0.685023 5.23774 0.0026552 6.93644 0.000125576C8.63649 0.0020228 10.2595 0.684029 11.4184 1.88352L11.8133 2.28596L12.2083 1.88352C14.5078 -0.502955 18.3782 -0.640006 20.853 1.57735C20.9627 1.67564 21.0686 1.77773 21.1705 1.88352C23.6098 4.42065 23.6098 8.34167 21.1705 10.8788L12.3937 19.8039C12.0901 20.113 11.5841 20.1263 11.2635 19.8335C11.253 19.8239 11.2428 19.814 11.2329 19.8039L2.45927 10.8788C0.0201492 8.34194 0.0201492 4.42115 2.45932 1.88429ZM3.61616 9.81721H3.61695L11.8133 18.1533L20.0104 9.81721C21.8739 7.87861 21.8739 4.88294 20.0104 2.94434C18.3182 1.17568 15.4594 1.06478 13.6252 2.69662C13.5361 2.77585 13.4505 2.85847 13.3683 2.94434L12.3937 3.93578C12.0726 4.24349 11.554 4.24349 11.2329 3.93578L10.2583 2.94511C8.56603 1.17645 5.70722 1.06555 3.87305 2.69739C3.784 2.77662 3.69832 2.85924 3.61616 2.94511C1.73646 4.88678 1.72268 7.88792 3.61616 9.81721Z" fill="#C4C4C4"></path>
+                                                </svg>
+                                                В избранное
+                                            </button>
+                                            <button class="tovar-item__action-btn">
+                                                <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M23.6641 20.2795V0.778778H17.5703V20.2795H16.0469V6.10225H9.95312V20.2795H8.42969V10.8843H2.33594V20.2795H0V21.7788H26V20.2795H23.6641V20.2795ZM19.0938 2.27802H22.1406V20.2795H19.0938V2.27802ZM11.4766 7.6015H14.5234V20.2795H11.4766V7.6015ZM3.85938 12.3834H6.90625V20.2795H3.85938V12.3834Z" fill="#C4C4C4"></path>
+                                                </svg>
+                                            Сравнить 
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="catalog__item__right">
+                                        <div class="tovar-item__about">
+                                            <div class="tovar-item__cod">Код товара 12935854</div>
+                                            <div class="tovar-item__old-price">52 089 ₽ </div>
+                                        </div>
+                                        <div class="tovar-item__bot">
+                                            <div class="tovar-item__price">46 989 ₽</div>
+                                            <button class="tovar-item__buy">Купить</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__item">
+                                    <div class="catalog__item__left">
+                                        <div class="tovar-item-promo">
+                                            <span class="promo-discount">Скидка 5%</span>
+                                            <span class="promo-hit">Хит</span>    
+                                        </div>
+                                        <a href="" class="tovar-item__img lazy" data-bg="./img/tovar.png"></a>
+                                    </div>
+                                    <div class="catalog__item__mid">
+                                        <div class="tovar-item__status in-stock">В наличии</div>
+                                        <a href="" class="tovar-item__name">Игровая приставка Sony Playstation 5</a>
+                                        <div class="tovar-item__action">
+                                            <button class="tovar-item__action-btn">
+                                                <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M2.45932 1.88429C3.61639 0.685023 5.23774 0.0026552 6.93644 0.000125576C8.63649 0.0020228 10.2595 0.684029 11.4184 1.88352L11.8133 2.28596L12.2083 1.88352C14.5078 -0.502955 18.3782 -0.640006 20.853 1.57735C20.9627 1.67564 21.0686 1.77773 21.1705 1.88352C23.6098 4.42065 23.6098 8.34167 21.1705 10.8788L12.3937 19.8039C12.0901 20.113 11.5841 20.1263 11.2635 19.8335C11.253 19.8239 11.2428 19.814 11.2329 19.8039L2.45927 10.8788C0.0201492 8.34194 0.0201492 4.42115 2.45932 1.88429ZM3.61616 9.81721H3.61695L11.8133 18.1533L20.0104 9.81721C21.8739 7.87861 21.8739 4.88294 20.0104 2.94434C18.3182 1.17568 15.4594 1.06478 13.6252 2.69662C13.5361 2.77585 13.4505 2.85847 13.3683 2.94434L12.3937 3.93578C12.0726 4.24349 11.554 4.24349 11.2329 3.93578L10.2583 2.94511C8.56603 1.17645 5.70722 1.06555 3.87305 2.69739C3.784 2.77662 3.69832 2.85924 3.61616 2.94511C1.73646 4.88678 1.72268 7.88792 3.61616 9.81721Z" fill="#C4C4C4"></path>
+                                                </svg>
+                                                В избранное
+                                            </button>
+                                            <button class="tovar-item__action-btn">
+                                                <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M23.6641 20.2795V0.778778H17.5703V20.2795H16.0469V6.10225H9.95312V20.2795H8.42969V10.8843H2.33594V20.2795H0V21.7788H26V20.2795H23.6641V20.2795ZM19.0938 2.27802H22.1406V20.2795H19.0938V2.27802ZM11.4766 7.6015H14.5234V20.2795H11.4766V7.6015ZM3.85938 12.3834H6.90625V20.2795H3.85938V12.3834Z" fill="#C4C4C4"></path>
+                                                </svg>
+                                            Сравнить 
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="catalog__item__right">
+                                        <div class="tovar-item__about">
+                                            <div class="tovar-item__cod">Код товара 12935854</div>
+                                            <div class="tovar-item__old-price">52 089 ₽ </div>
+                                        </div>
+                                        <div class="tovar-item__bot">
+                                            <div class="tovar-item__price">46 989 ₽</div>
+                                            <button class="tovar-item__buy">Купить</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="catalog__more">
+                                Показать еще
+                            </button>
+                            <div class="catalog__pager">
+                                <ul>
+                                    <li class="active">
+                                        <a href="">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="">3</a>
+                                    </li> 
+                                    <li>
+                                        <span>
+                                            ...
+                                        </span>
+                                        
+                                    </li> 
+                                    <li>
+                                        <a href="">35</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
