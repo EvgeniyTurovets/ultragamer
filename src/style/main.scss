@@ -1599,3 +1599,23 @@ input::placeholder,textarea::placeholder{
 .header__bot__catalog:hover .des-nav-catalog{  
     display: block;
 }
+.tovar-item__buy{
+    background-image: url('../img/main/in-cart.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 0;
+}
+.tovar-fix__buy{
+    background-image: url('../img/main/in-cart.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 0;
+}
+.tovar-fix__buy.tovar-in-cart{
+    color: transparent;
+    background-size: 20px;
+}
+.tovar-item__buy.tovar-in-cart{
+    color: transparent;
+    background-size: 20px;
+}

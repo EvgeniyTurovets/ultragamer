@@ -27,20 +27,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         mobNavBurger.classList.remove('active')
     })
 
-    // клик вне меню
-    document.addEventListener('click', function(event) {
-        let isClickInsideElement = mobNavBurger.contains(event.target);
-  
-        if(burger.contains(event.target)){
-            isClickInsideElement = 1;
-        }
-
-        if (!isClickInsideElement) {
-            //Do something click is outside specified element
-            mobNavBurger.classList.remove('active')
-        }
-    });
-
     // свайп в лево
     let x;
     window.addEventListener('touchstart', e => x = e.changedTouches[0].clientX);
@@ -154,4 +140,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
         mobNavCatalog.classList.remove('active')
     })
 
+
+    // Кнопка купить
+    let tovarBuy = document.querySelectorAll('.tovar-item__buy')
+    tovarBuy.forEach(btn => btn.addEventListener('click', function(){
+        btn.classList.add('tovar-in-cart');
+    }))
+
+    let tovarFixBuy = document.querySelector('.tovar-fix__buy')
+    tovarFixBuy.addEventListener('click', function(){
+        tovarFixBuy.classList.add('tovar-in-cart');
+    })
+
+    let tovarActionAdd = document.querySelector('.tovar__action__add-cart')
+    tovarActionAdd.addEventListener('click', function(){
+        tovarActionAdd.textContent('Добавлено в корзину')
+    })
 });
