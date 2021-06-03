@@ -152,8 +152,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
         tovarFixBuy.classList.add('tovar-in-cart');
     })
 
-    let tovarActionAdd = document.querySelector('.tovar__action__add-cart')
-    tovarActionAdd.addEventListener('click', function(){
-        tovarActionAdd.textContent('Добавлено в корзину')
-    })
 });
