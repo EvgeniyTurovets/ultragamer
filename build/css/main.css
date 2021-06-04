@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   border: 0;
   padding: 0;
@@ -375,7 +376,13 @@ input::placeholder, textarea::placeholder {
   line-height: 24px;
   display: flex;
   align-items: center;
-  color: #232323; }
+  color: #232323;
+  transition: 0.3s all;
+  padding: 5px 10px;
+  border-radius: 5px; }
+
+.cart:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25); }
 
 .cart__icon {
   position: relative;
@@ -1637,3 +1644,38 @@ input::placeholder, textarea::placeholder {
 .tovar-item__buy.tovar-in-cart {
   color: transparent;
   background-size: 20px; }
+
+.breadcrumb {
+  margin-top: 21px;
+  margin-bottom: 10px; }
+
+.breadcrumb ul {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.breadcrumb li {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  color: #232323;
+  margin-bottom: 10px; }
+
+.breadcrumb li span {
+  color: #848484; }
+
+.breadcrumb li a:hover {
+  color: #06E9FB; }
+
+.breadcrumb li a:after {
+  content: "–";
+  margin-left: 7px;
+  margin-right: 7px;
+  text-decoration: none;
+  color: #000; }

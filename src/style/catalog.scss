@@ -1,34 +1,4 @@
-.breadcrumb{
-    margin-top: 21px;
-    margin-bottom: 10px;
-}
-.breadcrumb ul{
-    display: flex;
-    flex-wrap: wrap;
-}
-.breadcrumb li{
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 15px;
-    /* identical to box height */
-    display: flex;
-    align-items: center;
-    color: #232323;
-    margin-bottom: 10px;
-}
-.breadcrumb li span{
-    color: #848484;
-}
-.breadcrumb li a:hover{
-    color: #06E9FB;
-}
-.breadcrumb li a:after{
-    content: "–";
-    margin-left: 7px;
-    margin-right: 7px;
-    text-decoration: none;
-    color: #000;
-}
+
 .section.tovar-cart{
     padding: 36px 80px 50px 80px;
 }
