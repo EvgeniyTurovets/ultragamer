@@ -29,7 +29,7 @@
   text-align: center;
   text-transform: uppercase;
   color: #000000;
-  margin-bottom: 9px; }
+  margin-bottom: 15px; }
 
 .text__block {
   padding-right: 74px;
@@ -139,3 +139,6 @@ article {
     margin-right: 25px; }
   .benefit {
     margin-bottom: 30px; } }
+
+.news__item {
+  margin-bottom: 40px; }

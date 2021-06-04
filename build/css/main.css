@@ -1186,14 +1186,22 @@ input::placeholder, textarea::placeholder {
 .news__item {
   width: calc(100% / 4 - 20px);
   margin: 0 10px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  transition: 0.3s all; }
+
+.news__item:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px); }
+  .news__item:hover .news__item__img {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); }
 
 .news__item__img {
   padding-bottom: 78%;
   background-position: center;
   background-size: cover;
   margin-bottom: 15px;
-  display: block; }
+  display: block;
+  transition: 0.3s all; }
 
 .news__item__bot {
   display: -ms-flexbox;
@@ -1679,3 +1687,82 @@ input::placeholder, textarea::placeholder {
   margin-right: 7px;
   text-decoration: none;
   color: #000; }
+
+.town-modal {
+  background-color: rgba(0, 0, 0, 0.25);
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  display: none; }
+
+.town-modal.active {
+  display: -ms-flexbox;
+  display: flex; }
+
+.town-modal-wrap {
+  background-color: #fff;
+  padding: 15px;
+  position: relative;
+  padding-top: 25px;
+  width: 500px;
+  max-width: 100%; }
+  .town-modal-wrap .close {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    transition: 0.1s all; }
+    .town-modal-wrap .close svg {
+      width: 20px; }
+  .town-modal-wrap .close:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
+
+.town-modal-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 25px; }
+
+.cities {
+  padding: 15px 0;
+  border-top: 1px solid #ddd;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.cities__item {
+  width: calc(100% / 3);
+  padding-right: 10px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px; }
+  .cities__item a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: block; }
+  .cities__item a:hover {
+    color: #06E9FB; }
+
+@media (max-width: 767px) {
+  .town-modal {
+    overflow: auto;
+    -ms-flex-align: start;
+        align-items: flex-start; }
+  .cities__item {
+    width: calc(100% / 2); }
+  .town-modal-wrap {
+    height: 100%; } }

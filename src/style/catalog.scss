@@ -918,3 +918,48 @@
     outline-width: 0;
 }
 
+.on-click-modal{
+    text-align: center;
+    input{
+        background: #fff;
+        border: 1px solid #c4c4c4;
+        border-radius: 4px;
+        height: 45px;
+        width: 100%;
+        padding: 0 15px;
+        margin-bottom: 15px;
+    }
+    .town-modal-wrap{
+        width: 300px;
+        height: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        margin-top: 10px;
+    }
+    button{
+        padding: 12px 23px;
+        background: #2ec258;
+        border-radius: 25px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #fff;
+        cursor: pointer;
+        transition: .1s all;
+        margin-bottom: 15px;
+    }
+    button:hover {
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+    p{
+        line-height: 1.1;
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+}
+.popup__title{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}

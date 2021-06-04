@@ -66,4 +66,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
         cartStepNav[2].classList.add('active')
         cartStep[2].classList.add('active')
     }))
+
+    // сменить город
+    if(document.querySelectorAll('.change-town')){
+        let changeTownBtns = document.querySelectorAll('.change-town')
+        let townModal = document.getElementById('town-modal')
+        let townModalClose = document.getElementById('town-modal-close')
+        changeTownBtns.forEach(btn => btn.addEventListener('click', function(even){
+            even.preventDefault()
+            townModal.classList.add('active');
+        }))
+
+        townModalClose.addEventListener('click', function(){
+            townModal.classList.remove('active');
+        })
+
+        townModal.addEventListener('click', function(e){   
+            if (!townModal.querySelector('.town-modal-wrap').contains(e.target)){
+                townModal.classList.remove('active');
+            }
+        });
+    }
 })

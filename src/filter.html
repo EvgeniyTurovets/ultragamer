@@ -49,7 +49,7 @@
                                 </ul>
                             </nav>
                             <div class="header__right__action">
-                                <div class="header__location">
+                                <div class="header__location change-town">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                         <path d="M14.3831 2.22982C12.9452 0.791896 11.0333 0 8.99982 0C6.96631 0 5.05444 0.791896 3.61654 2.22982C2.17861 3.66779 1.38672 5.57959 1.38672 7.61307C1.38672 11.7268 5.27634 15.1484 7.366 16.9865C7.65639 17.242 7.90716 17.4626 8.10696 17.6492C8.35727 17.883 8.67856 18 8.99978 18C9.32108 18 9.6423 17.883 9.89265 17.6492C10.0924 17.4626 10.3432 17.242 10.6336 16.9865C12.7233 15.1483 16.6129 11.7268 16.6129 7.61307C16.6129 5.57959 15.821 3.66779 14.3831 2.22982ZM9.93716 16.1949C9.6404 16.4559 9.38415 16.6814 9.17286 16.8787C9.07579 16.9693 8.92378 16.9694 8.82667 16.8787C8.61542 16.6813 8.35913 16.4559 8.06238 16.1949C6.09784 14.4668 2.44106 11.25 2.44106 7.6131C2.44106 3.99664 5.38325 1.05444 8.99975 1.05444C12.6162 1.05444 15.5584 3.99664 15.5584 7.6131C15.5584 11.25 11.9017 14.4668 9.93716 16.1949Z" fill="#F843D6"/>
                                         <path d="M9.00002 3.97052C7.15006 3.97052 5.64502 5.47553 5.64502 7.32549C5.64502 9.17545 7.15006 10.6805 9.00002 10.6805C10.85 10.6805 12.355 9.17545 12.355 7.32549C12.355 5.47553 10.85 3.97052 9.00002 3.97052ZM9.00002 9.62601C7.73148 9.62601 6.69943 8.59396 6.69943 7.32545C6.69943 6.05694 7.73148 5.02489 9.00002 5.02489C10.2686 5.02489 11.3006 6.05694 11.3006 7.32545C11.3006 8.59396 10.2686 9.62601 9.00002 9.62601Z" fill="#F843D6"/>
@@ -455,7 +455,7 @@
                     </a>
                 </li>
             </ul>
-            <div class="header__location">
+            <div class="header__location change-town">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                     <path d="M14.3831 2.22982C12.9452 0.791896 11.0333 0 8.99982 0C6.96631 0 5.05444 0.791896 3.61654 2.22982C2.17861 3.66779 1.38672 5.57959 1.38672 7.61307C1.38672 11.7268 5.27634 15.1484 7.366 16.9865C7.65639 17.242 7.90716 17.4626 8.10696 17.6492C8.35727 17.883 8.67856 18 8.99978 18C9.32108 18 9.6423 17.883 9.89265 17.6492C10.0924 17.4626 10.3432 17.242 10.6336 16.9865C12.7233 15.1483 16.6129 11.7268 16.6129 7.61307C16.6129 5.57959 15.821 3.66779 14.3831 2.22982ZM9.93716 16.1949C9.6404 16.4559 9.38415 16.6814 9.17286 16.8787C9.07579 16.9693 8.92378 16.9694 8.82667 16.8787C8.61542 16.6813 8.35913 16.4559 8.06238 16.1949C6.09784 14.4668 2.44106 11.25 2.44106 7.6131C2.44106 3.99664 5.38325 1.05444 8.99975 1.05444C12.6162 1.05444 15.5584 3.99664 15.5584 7.6131C15.5584 11.25 11.9017 14.4668 9.93716 16.1949Z" fill="#F843D6"></path>
                     <path d="M9.00002 3.97052C7.15006 3.97052 5.64502 5.47553 5.64502 7.32549C5.64502 9.17545 7.15006 10.6805 9.00002 10.6805C10.85 10.6805 12.355 9.17545 12.355 7.32549C12.355 5.47553 10.85 3.97052 9.00002 3.97052ZM9.00002 9.62601C7.73148 9.62601 6.69943 8.59396 6.69943 7.32545C6.69943 6.05694 7.73148 5.02489 9.00002 5.02489C10.2686 5.02489 11.3006 6.05694 11.3006 7.32545C11.3006 8.59396 10.2686 9.62601 9.00002 9.62601Z" fill="#F843D6"></path>
@@ -1163,6 +1163,90 @@
                 </div>
             </div>
         </footer>
+    </div>
+
+    <div class="town-modal" id="town-modal">
+        <div class="town-modal-wrap">
+            <div class="close" id="town-modal-close">
+                <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg>
+            </div>
+            <div class="town-modal-title">Выбор города</div>
+            <ul class="cities" id="cities_default">
+                <li class="cities__item">
+                    <a class="cities__link msk" href="" rel="nofollow">Москва</a>
+                </li>
+                <li class="cities__item">
+                    <a class="cities__link tyumen" href="" rel="nofollow">Тюмень</a>
+                </li>
+                <li class="cities__item">
+                    <a class="cities__link khabarovsk" href="" rel="nofollow">Хабаровск</a>
+                </li>
+                <li class="cities__item">
+                    <a class="cities__link dev" href="" rel="nofollow">Новосибирск</a>
+                </li>
+                <li class="cities__item">
+                    <a class="cities__link novokuznetsk" href="" rel="nofollow">Новокузнецк</a>
+                </li>
+                <li class="cities__item">
+                    <a class="cities__link chelyabinsk" href="" rel="nofollow">Челябинск</a>
+                </li>
+                <li class="cities__item">
+                    <a class="cities__link omsk" href="" rel="nofollow">Омск</a>
+                </li>
+                <li class="cities__item">
+                    <a class="cities__link voronezh" href="" rel="nofollow">Воронеж</a>
+                </li>
+                <li class="cities__item">
+                    <a class="cities__link ufa" href="" rel="nofollow">Уфа</a>
+                </li>
+                <li class="cities__item">
+                    <a class="cities__link tomsk" href="" rel="nofollow">Томск</a>
+                </li>
+                <li class="cities__item">
+                    <a class="cities__link Krasnodar" href="" rel="nofollow">Краснодар</a>
+                </li>
+                <li class="cities__item">
+                    <a class="cities__link spb" href="" rel="nofollow">Санкт-Петербург</a>
+                </li>
+                <li class="cities__item">
+                    <a class="cities__link kemerovo" href="" rel="nofollow">Кемерово</a>
+                </li>
+                <li class="cities__item">
+                    <a class="cities__link saratov" href="" rel="nofollow">Саратов</a>
+                </li>
+                <li class="cities__item">
+                    <a class="cities__link samara" href="" rel="nofollow">Самара</a>
+                </li>
+                <li class="cities__item">
+                    <a class="cities__link krasnoyarsk" href="" rel="nofollow">Красноярск</a>
+                </li>
+                <li class="cities__item">
+                    <a class="cities__link tolyatti" href="" rel="nofollow">Тольятти</a>
+                </li>
+                <li class="cities__item">
+                    <a class="cities__link rostov-na-donu" href="" rel="nofollow">Ростов-на-Дону</a>
+                </li>
+                <li class="cities__item">
+                    <a class="cities__link irkutsk" href="" rel="nofollow">Иркутск</a>
+                </li>
+                <li class="cities__item">
+                    <a class="cities__link izhevsk" href="" rel="nofollow">Ижевск</a>
+                </li>
+                <li class="cities__item">
+                    <a class="cities__link nizhniy-novgorod" href="" rel="nofollow">Нижний Новгород</a>
+                </li>
+                <li class="cities__item">
+                    <a class="cities__link barnaul" href="" rel="nofollow">Барнаул</a>
+                </li>
+                <li class="cities__item">
+                    <a class="cities__link ulyanovsk" href="" rel="nofollow">Ульяновск</a>
+                </li>
+                <li class="cities__item">
+                    <a class="cities__link kazan" href="" rel="nofollow">Казань</a>
+                </li>
+            </ul>
+            
+        </div>
     </div>
     
     <!-- плaгины -->

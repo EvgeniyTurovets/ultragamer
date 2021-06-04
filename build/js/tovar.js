@@ -36,19 +36,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 
     // плашка купить товар
-    let plashka = document.getElementById('tovar-fix')
-    let tovarCart = document.getElementById('tovar-cart')
-   
-    let tovarActionBlock =  document.getElementById('tovar__action__block')
-    tovarActionBlockPoint = tovarActionBlock.offsetTop + tovarActionBlock.clientHeight
-  
-    window.addEventListener('scroll', function(){
-        if(window.scrollY > tovarActionBlockPoint){
-            plashka.classList.add('active')
-        }else{
-            plashka.classList.remove('active')
-        }
-    })
+    if(document.getElementById('tovar-fix')){
+        let plashka = document.getElementById('tovar-fix')
+        let tovarCart = document.getElementById('tovar-cart')
+    
+        let tovarActionBlock =  document.getElementById('tovar__action__block')
+        tovarActionBlockPoint = tovarActionBlock.offsetTop + tovarActionBlock.clientHeight
+    
+        window.addEventListener('scroll', function(){
+            if(window.scrollY > tovarActionBlockPoint){
+                plashka.classList.add('active')
+            }else{
+                plashka.classList.remove('active')
+            }
+        })
+    }
+    
 
     // добавить в избраное и сравнение
     let tovarActionBot = document.querySelectorAll('.tovar__action__bot button')
@@ -91,4 +94,31 @@ document.addEventListener("DOMContentLoaded", function(event) {
     btnMore.forEach(btn => btn.addEventListener('click', function(){
         btn.classList.toggle('active')
     }))
+
+    if(document.querySelector('.tovar-fix__buy')){
+        let tovarFixBuy = document.querySelector('.tovar-fix__buy')
+        tovarFixBuy.addEventListener('click', function(){
+            tovarFixBuy.classList.add('tovar-in-cart');
+        })
+    }
+
+    if(document.querySelector('.tovar__action__buy-1-click')){
+        let buy1click = document.querySelector('.tovar__action__buy-1-click')
+        let modal1Click = document.getElementById('on-click-modal') 
+        let modal1ClickClose = document.getElementById('on-click-modal-close') 
+        buy1click.addEventListener('click', function(){
+            modal1Click.classList.add('active')
+        })
+        modal1ClickClose.addEventListener('click', function(){
+            modal1Click.classList.remove('active')
+        })
+
+        modal1Click.addEventListener('click', function(e){   
+            if (!modal1Click.querySelector('.town-modal-wrap').contains(e.target)){
+                modal1Click.classList.remove('active');
+            }
+        });
+    }
+    
+    
 })
