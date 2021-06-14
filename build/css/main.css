@@ -479,14 +479,11 @@ input::placeholder, textarea::placeholder {
     .header__mob .header__logo {
       -ms-flex: 1;
           flex: 1;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-pack: center;
-          justify-content: center;
       padding-bottom: 5px;
       margin: 0 10px; }
   .header__logo img {
-    max-width: 180px; }
+    max-width: 180px;
+    margin: 0 auto; }
   .header {
     display: none; }
   .header__mob__wrap {

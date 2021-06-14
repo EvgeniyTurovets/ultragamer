@@ -386,14 +386,13 @@ input::placeholder,textarea::placeholder{
         border-bottom: 1px solid #e5e5e5;
         .header__logo{
             flex: 1;
-            display: flex;
-            justify-content: center;
             padding-bottom: 5px;
             margin: 0 10px;
         }
     }
     .header__logo img{
         max-width: 180px;
+        margin: 0 auto;
     }
     .header{
         display: none;
