@@ -364,18 +364,36 @@
 }
 
 @media(max-width: 1199px){
-    .tovar-cart__wrap{
-        flex-wrap: wrap;
-    }
+    
     .tovar-info{
-        order: 3;
-        padding-left: 0;
+        margin-top: 20px;
+    }
+    
+    .gallery-top .swiper-pagination-bullets {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .gallery-top .swiper-pagination-bullet {
+        width: 11px;
+        height: 11px;
+        background: #e5e5e5;
+        opacity: 1;
+    }
+    .gallery-top .swiper-pagination-bullet-active {
+        background: #232323;
     }
     .tovar__action {
-        -ms-flex: 0 0 326px;
-        flex: 1;
-        margin-left: 150px;
-        order: 2;
+        flex: 0 0 300px;
+        margin-left: 20px;
+    }
+    .slider-vertical {
+        display: none;
+    }
+    .tovar__action__block{
+        padding: 14px 25px;
     }
 }
 
@@ -388,14 +406,50 @@
     }
    
     .tovar__action{
-        flex: 0 0 320px;
+        flex: 1;
         margin-left: 0;
     }
     .tovar-info{
-        flex: 0 0 250px;
+        flex: 1;
         padding-left: 50px;
     }
+    .tovar-cart__wrap{
+        flex-wrap: wrap;
+    }
+    .slider-vertical {
+        display: block;
+    }
+    .tovar__action{
+        flex: 0 0 350px;
+    }
+    .tovar__action{
+        margin-top: 20px;
+    }
+    .tovar__action__add-cart{
+        max-width: 100%;
+        max-width: 100%;
+        justify-content: center;
+    }
+    .tovar__action__buy-1-click{
+        max-width: 100%;
+        justify-content: center;
+    }
+    .tovar-info{
+        order: 3;
+    }
 }
+
+@media(max-width: 700px){
+    .tovar__action{
+        flex: auto;
+        width: 100%;
+    }
+    .tovar-info{
+        padding-left: 0;
+        width: 100%;
+    }
+}
+
 
 
 
@@ -565,7 +619,7 @@
         background: #232323;
     }
     .tovar__action{
-        flex: 1;
+        margin-top: 0;
     }
     .tovar__action__block{
         padding: 14px 20px;

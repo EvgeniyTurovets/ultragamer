@@ -315,6 +315,8 @@ input::placeholder,textarea::placeholder{
     }
     .header__logo img{
         max-width: 240px;
+        width: 100%;
+        display: block;
     }
     .search{
         max-width: 445px;
@@ -720,8 +722,12 @@ input::placeholder,textarea::placeholder{
         height: 350px;
     }
 }
-
 @media(max-width: 1199px){
+    .swiper-top .swipe-slide__text{
+        max-width: 70%;
+    }
+}
+@media(max-width: 1023px){
     .main-top{
         flex-direction: column;
         align-items: flex-start;
@@ -744,8 +750,10 @@ input::placeholder,textarea::placeholder{
     .main-top__right{
         width: 100%;
     }
+    .swiper-top .swipe-slide__text{
+        max-width: 50%;
+    }
     
-  
 }
 @media(max-width: 767px){
     .swiper-top .swiper-top__item{

@@ -342,19 +342,29 @@
     margin-right: 35px; } }
 
 @media (max-width: 1199px) {
-  .tovar-cart__wrap {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
   .tovar-info {
-    -ms-flex-order: 3;
-        order: 3;
-    padding-left: 0; }
+    margin-top: 20px; }
+  .gallery-top .swiper-pagination-bullets {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 15px; }
+  .gallery-top .swiper-pagination-bullet {
+    width: 11px;
+    height: 11px;
+    background: #e5e5e5;
+    opacity: 1; }
+  .gallery-top .swiper-pagination-bullet-active {
+    background: #232323; }
   .tovar__action {
-    -ms-flex: 0 0 326px;
-    flex: 1;
-    margin-left: 150px;
-    -ms-flex-order: 2;
-        order: 2; } }
+    -ms-flex: 0 0 300px;
+        flex: 0 0 300px;
+    margin-left: 20px; }
+  .slider-vertical {
+    display: none; }
+  .tovar__action__block {
+    padding: 14px 25px; } }
 
 @media (max-width: 1023px) {
   .tovar-cart__slider {
@@ -365,13 +375,44 @@
     -ms-flex-pack: center;
         justify-content: center; }
   .tovar__action {
-    -ms-flex: 0 0 320px;
-        flex: 0 0 320px;
+    -ms-flex: 1;
+        flex: 1;
     margin-left: 0; }
   .tovar-info {
-    -ms-flex: 0 0 250px;
-        flex: 0 0 250px;
-    padding-left: 50px; } }
+    -ms-flex: 1;
+        flex: 1;
+    padding-left: 50px; }
+  .tovar-cart__wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .slider-vertical {
+    display: block; }
+  .tovar__action {
+    -ms-flex: 0 0 350px;
+        flex: 0 0 350px; }
+  .tovar__action {
+    margin-top: 20px; }
+  .tovar__action__add-cart {
+    max-width: 100%;
+    max-width: 100%;
+    -ms-flex-pack: center;
+        justify-content: center; }
+  .tovar__action__buy-1-click {
+    max-width: 100%;
+    -ms-flex-pack: center;
+        justify-content: center; }
+  .tovar-info {
+    -ms-flex-order: 3;
+        order: 3; } }
+
+@media (max-width: 700px) {
+  .tovar__action {
+    -ms-flex: auto;
+        flex: auto;
+    width: 100%; }
+  .tovar-info {
+    padding-left: 0;
+    width: 100%; } }
 
 .tovar-fix {
   position: fixed;
@@ -523,8 +564,7 @@
   .gallery-top .swiper-pagination-bullet-active {
     background: #232323; }
   .tovar__action {
-    -ms-flex: 1;
-        flex: 1; }
+    margin-top: 0; }
   .tovar__action__block {
     padding: 14px 20px;
     -ms-flex-order: 3;

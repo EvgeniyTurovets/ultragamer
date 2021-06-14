@@ -422,7 +422,9 @@ input::placeholder, textarea::placeholder {
   .header__right__action {
     margin-left: 25px; }
   .header__logo img {
-    max-width: 240px; }
+    max-width: 240px;
+    width: 100%;
+    display: block; }
   .search {
     max-width: 445px; }
   .header__bot__cart-wrap {
@@ -803,6 +805,10 @@ input::placeholder, textarea::placeholder {
     height: 350px; } }
 
 @media (max-width: 1199px) {
+  .swiper-top .swipe-slide__text {
+    max-width: 70%; } }
+
+@media (max-width: 1023px) {
   .main-top {
     -ms-flex-direction: column;
         flex-direction: column;
@@ -823,7 +829,9 @@ input::placeholder, textarea::placeholder {
   .swiper-top .swipe-slide__text {
     font-size: 30px; }
   .main-top__right {
-    width: 100%; } }
+    width: 100%; }
+  .swiper-top .swipe-slide__text {
+    max-width: 50%; } }
 
 @media (max-width: 767px) {
   .swiper-top .swiper-top__item {
